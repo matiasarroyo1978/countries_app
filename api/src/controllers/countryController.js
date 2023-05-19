@@ -23,9 +23,6 @@ const saveCountries = async () => {
     console.log('Countries saved from api:', result.length);
   } catch (error) {
     console.error('Error while fetching and saving countries:', error);
-    /* const countries = data.map(mapCountry);
-    const result = await Country.bulkCreate(countries, { ignoreDuplicates: true });
-    console.log('Countries saved from data.json:', result.length); */
   }
 };
 
