@@ -8,9 +8,9 @@ const LandingPage = () => {
     return (
         <div>
             <div className={styles.landing}>
-                <h1 className={styles.landing_h1}>Welcome a Countries App</h1>
+                <h1 className={styles.landing_h1}>Welcome to Countries of the world</h1>
                 <Link to="/home">
-                    <button className={styles.button}>Enter</button>
+                    <button className={styles.button}>Get Started</button>
                 </Link>
             </div>
                 <footer className={styles.footer}>
@@ -18,13 +18,13 @@ const LandingPage = () => {
                         <p className={styles.copyright}>&copy; Copyright 2023</p>
                     </div>
                     <div className={`${styles.column} ${styles.center}`}>
-                        <p >Developer Gullit Moran</p>
+                        <p >Developed by Matias Arroyo</p>
                     </div>
                     <div className={`${styles.column} ${styles.right}`}>
-                        <a href="https://github.com/morangullit/countries_api" target='_black'>
+                        <a href="https://github.com/matiasarroyo1978/countries_app" target='_black'>
                         <img className={styles.logos_img} src={GitHub} alt="Logo de GitHub" />
                         </a>
-                        <a href="https://linkedin.com/in/gullit-enrique-moran-escobar-731272a5" target='_black'>
+                        <a href="https://linkedin.com/in/matias-arroyo19" target='_black'>
                         <img className={styles.logos_img} src={Linkedin} alt="Logo de Linkedin" />
                         </a>
                     </div>

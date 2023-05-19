@@ -91,9 +91,9 @@ export const NavBar = () => {
         {isDetailPage && (
           <Link className={styles.button} to='/home'>Back</Link>
         )}
-        {!isDetailPage && (
+        {/* {!isDetailPage && (
           <Link className={styles.button} to='/'>Exit</Link>
-        )}
+        )} */}
       </div>
     </nav>
   );
