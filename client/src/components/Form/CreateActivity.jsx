@@ -129,7 +129,7 @@ const CreateActivity = ({ showNavBar }) => {
           />
         </div>
         <div>
-          <label className={styles.label} htmlFor="duration">Duration:</label>
+          <label className={styles.label} htmlFor="duration">Duration(Hours):</label>
           <input
             type="number"
             name="duration"
