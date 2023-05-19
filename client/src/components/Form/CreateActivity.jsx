@@ -78,7 +78,7 @@ const CreateActivity = ({ showNavBar }) => {
     event.preventDefault();
     const existingActivity = activities.find(a => a.name === activityData.name);
     if (existingActivity) {
-      alert(`An activity with the name "${activityData.name}" already exists. Please choose a different name.`);
+      alert(`An activity with the name "${activityData.name}" already exist.Please choose a different name.`);
       return;
     }
 
@@ -100,6 +100,7 @@ const CreateActivity = ({ showNavBar }) => {
       season: '',
       countries: []
     });
+    alert('Activity created')
   };
 
 

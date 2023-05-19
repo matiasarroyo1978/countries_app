@@ -10,7 +10,7 @@ const Card = ({ id, name, flagImage, continent }) => {
           <h2 className={styles.card_title}>{name}</h2>
         </Link>
         <p className={styles.card_text}>
-          <strong>Continente:</strong> {continent}
+          <strong>Continent:</strong> {continent}
         </p>
       </div>
     </div>
