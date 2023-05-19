@@ -1,0 +1,30 @@
+.pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  button {
+    margin: 0 5px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #ffffff;
+    padding: 8px 12px; /* agregamos padding para crear la caja */
+    border-radius: 5px; /* agregamos un borde redondeado para la caja */
+    border: 1px solid #ffffff; /* agregamos un borde blanco a la caja */
+  }
+  
+  button:hover {
+    text-decoration: underline;
+  }
+  
+  .active {
+    font-weight: bold;
+    background-color: #ffffff; /* agregamos un color de fondo blanco a la caja */
+    color: #000000; /* agregamos un color de texto negro a la caja */
+  }
+  

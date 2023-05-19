@@ -1,0 +1,53 @@
+.nav_container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #33333369;
+  margin-left: 20px;
+  border-radius: 20px;
+}
+
+.label {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.filter_container,
+.order_container {
+  display: flow-root;
+  align-items: flex-end;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  border: 1px solid #ccc;
+  background-color: white;
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 17px;
+  border-radius: 5px;
+  border: none;
+  background-color: #1affff;
+  color: #000000;
+  cursor: pointer;
+  margin: 0 .5rem 0;
+}
+
+.button:hover {
+  background-color: #999
+}
+
+.button:active {
+  background-color: #999;
+  box-shadow: 0 5px #666;
+  transform: translateY(1px);
+}

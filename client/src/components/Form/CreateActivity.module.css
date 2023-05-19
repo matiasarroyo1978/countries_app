@@ -1,0 +1,136 @@
+.container {
+    border-radius: 20px;
+    background-color: #f2f2f244;
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: first baseline;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+select,
+input[type="number"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  border: 1px solid #ccc;
+}
+
+select {
+  background-color: #fff;
+}
+
+select:focus {
+  outline: none;
+  box-shadow: 0 0 5px #569eec;
+}
+
+.button {
+  padding: 10px 20px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: #1affff;
+    color: #000000;
+    cursor: pointer;
+}
+
+.button:hover {
+  background-color: #3F6E91;
+}
+
+.button_link {
+  padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #1affff;
+    color: #000000;
+    cursor: pointer;
+}
+
+.button_home{
+  padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #1affff;
+    color: #000000;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 500px;
+}
+
+
+.button_link:active {
+  background-color: #999;
+  box-shadow: 0 5px #666;
+  transform: translateY(1px);
+}
+
+
+
+
+
+ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+  }
+  
+  li {
+    margin-right: 10px;
+  }
+  
+  li:last-child {
+    margin-right: 0;
+  }
+
+  .removeButton {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 1px 5px;
+    margin-left: 5px;
+  }
+
+
+  .h1_titel{
+    color: white;
+  text-align: center;
+  margin-top: 50px;
+  }
+
+  .invalid {
+    border: 1px solid red;
+  }
+  
+
+
+
+  
+  
+  
+  
