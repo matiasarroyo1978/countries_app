@@ -30,7 +30,7 @@ const Cards = () => {
 
   return (
     <>
-      <Pagination perPage={perPage} totalItems={totalItems} currentPage={currentPage} paginate={paginate} />
+     
       <div className={styles.card_container}>
         {currentItems.map((country) => (
           <Card
@@ -42,6 +42,7 @@ const Cards = () => {
           />
         ))}
       </div>
+      <Pagination perPage={perPage} totalItems={totalItems} currentPage={currentPage} paginate={paginate} />
     </>
   );
 };
