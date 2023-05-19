@@ -3,10 +3,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import { createActivity, getCountries } from '../../redux/actions/actions';
 import { NavBar } from '../NavBar/NavBar';
 import styles from './CreateActivity.module.css';
-
+import { useHistory } from 'react-router-dom';
 
 
 const CreateActivity = ({ showNavBar }) => {
+  const history = useHistory();
   const dispatch = useDispatch();
   const countries = useSelector(state => state.countries);
   const activities = useSelector(state => state.activities);
@@ -101,6 +102,7 @@ const CreateActivity = ({ showNavBar }) => {
       countries: []
     });
     alert('Activity created')
+    history.push('/home')
   };
 
 
