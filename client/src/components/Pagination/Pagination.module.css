@@ -12,7 +12,7 @@
     border: none;
     cursor: pointer;
     font-size: 16px;
-    color: #000;
+    color: #fff;
     padding: 8px 12px; /* agregamos padding para crear la caja */
     border-radius: 5px; /* agregamos un borde redondeado para la caja */
     border: 1px solid #180808; /* agregamos un borde blanco a la caja */
