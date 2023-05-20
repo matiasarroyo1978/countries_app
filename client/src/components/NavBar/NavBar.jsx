@@ -92,7 +92,7 @@ export const NavBar = () => {
           <Link className={styles.button} to='/home'>Back</Link>
         )}
         {!isDetailPage && (
-          <Link className={styles.button} to='/'>Exit</Link>
+          <Link className={styles.button} to='/'>Landing</Link>
         )}
       </div>
     </nav>

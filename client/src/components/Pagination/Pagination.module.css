@@ -12,10 +12,10 @@
     border: none;
     cursor: pointer;
     font-size: 16px;
-    color: #ffffff;
+    color: #000;
     padding: 8px 12px; /* agregamos padding para crear la caja */
     border-radius: 5px; /* agregamos un borde redondeado para la caja */
-    border: 1px solid #ffffff; /* agregamos un borde blanco a la caja */
+    border: 1px solid #180808; /* agregamos un borde blanco a la caja */
   }
   
   button:hover {
@@ -24,7 +24,7 @@
   
   .active {
     font-weight: bold;
-    background-color: #ffffff; /* agregamos un color de fondo blanco a la caja */
-    color: #000000; /* agregamos un color de texto negro a la caja */
+    background-color: #000; /* agregamos un color de fondo blanco a la caja */
+    color: #fff; /* agregamos un color de texto negro a la caja */
   }
   

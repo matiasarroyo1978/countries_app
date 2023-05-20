@@ -78,8 +78,9 @@ const CreateActivity = ({ showNavBar }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const existingActivity = activities.find(a => a.name === activityData.name);
-    if (existingActivity) {
-      alert(`An activity with the name "${activityData.name}" already exist.Please choose a different name.`);
+    const existingCountry = countries.find(c => c.name === activityData.countries.name)
+    if (existingActivity && existingCountry) {
+      alert(`An activity with the name "${activityData.name}" already exist on country "${activityData.countries} ".Please choose a different country.`);
       return;
     }
 
