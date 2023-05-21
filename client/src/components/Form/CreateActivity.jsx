@@ -112,7 +112,7 @@ const CreateActivity = ({ showNavBar }) => {
   };
 
 
-
+  let countriesSorted = countries.sort((a, b) => a.name.localeCompare(b.name)); 
 
   return (
     <div >
@@ -171,10 +171,10 @@ const CreateActivity = ({ showNavBar }) => {
             onChange={handleCountryChange}
           >
             <option value="">Select Country</option>
-            {countries.map((country) => (
-              <option key={country.id} value={country.id}>
-                {country.id} - {country.name}
-              </option>
+            {countriesSorted?.map((event, i) => (
+                    <option key={i} value={event.name}>
+                      {event.name}
+                    </option>
             ))}
           </select>
           <button className={styles.button} type="button" onClick={handleAddCountry}>
