@@ -1,28 +1,18 @@
 body {
-  font-family: fantasy;
+  font-family: MS Gothic;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .landing {
-  background-image: url('../../assets/mapa.png');
-  background-size: cover;
+  background-image: url('../../assets/world-map.png');
+  background-size:auto;
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 90vh;
   width: 100%;
-}
-
-.landing_h1 {
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-  font-size: 3rem;
-  color: #020202;
 }
 
 .button {
@@ -43,7 +33,7 @@ text-shadow: 3px 2px 1px #9daef5;
   -webkit-box-shadow: 6px 5px 24px #666666;
   -moz-box-shadow: 6px 5px 24px #666666;
   box-shadow: 6px 5px 24px #666666;
-font-family: Arial;
+font-family: MS Gothic;
   color: #070606;
   font-size: 27px;
   padding: 19px;
@@ -108,6 +98,7 @@ font-family: Arial;
   right: 0;
 }
 p {
+  font-family: MS Gothic;
   display: contents;
   color: rgb(14, 13, 13);
 }

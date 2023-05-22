@@ -8,7 +8,6 @@ const LandingPage = () => {
     return (
         <div>
             <div className={styles.landing}>
-                <h1 className={styles.landing_h1}>Countries of the world</h1>
                 <Link to="/home">
                     <button className={styles.button}>Get Started</button>
                 </Link>

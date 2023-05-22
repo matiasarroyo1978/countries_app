@@ -31,6 +31,7 @@
 }
 
 .card_title {
+  font-family: MS-Gothic;
   font-size: 1.2em;
   font-weight: bold;
   overflow: hidden;
@@ -39,6 +40,7 @@
   color: rgb(66, 31, 10);
 }
 .card_text {
+  font-family: MS-Gothic;
   font-size: 1em;
   color: rgb(66, 31, 10);
 }

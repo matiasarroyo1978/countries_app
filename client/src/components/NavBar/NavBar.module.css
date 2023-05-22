@@ -9,6 +9,7 @@
 }
 
 .label {
+  font-family: MS Gothic; 
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-end;
