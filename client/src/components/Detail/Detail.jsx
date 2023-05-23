@@ -15,7 +15,7 @@ const Detail = () => {
 
   return (
     <>
-      <h1 className={styles.h1_title}>Country Detail</h1>
+      <h1 className={styles.title}>Country Detail</h1>
       <div className={styles.card_div}>
         <div className={styles.card}>
           <img className={styles.card_image} src={country.flagImage} alt={`Bandera de ${country.name}`} />
