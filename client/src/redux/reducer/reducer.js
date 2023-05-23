@@ -10,17 +10,16 @@ import {
   SET_SELECTED_ACTIVITY,
   ORDER_POPULATION_ASC,
   ORDER_POPULATION_DESC,
-
 } from '../actions/types';
 
 const initialState = {
-  countries: [],
-  filteredCountries: [],
-  detail: "",
-  order: "Abc",
-  continentFilter: "",
-  activities: [],
-  selectedActivity: "",
+  countries: [],               // Lista de todos los países
+  filteredCountries: [],      // Lista de países filtrados
+  detail: "",                  // Detalles de un país específico
+  order: "Abc",                // Orden de la lista de países ("Abc" por defecto)
+  continentFilter: "",         // Filtro por continente de los países
+  activities: [],              // Lista de actividades
+  selectedActivity: "",        // Actividad seleccionada
 };
 
 const countriesReducer = (state = initialState, action) => {
@@ -49,11 +48,13 @@ const countriesReducer = (state = initialState, action) => {
     case ORDER_COUNTRIES:
       let sortedCountries = [];
       if (state.continentFilter) {
+        // Si hay un filtro por continente, se ordenan los países filtrados
         sortedCountries =
           action.payload === "Abc"
             ? [...state.filteredCountries].sort((a, b) => a.name.localeCompare(b.name))
             : [...state.filteredCountries].sort((a, b) => b.name.localeCompare(a.name));
       } else {
+        // Si no hay filtro por continente, se ordenan todos los países
         sortedCountries =
           action.payload === "Abc"
             ? [...state.countries].sort((a, b) => a.name.localeCompare(b.name))
@@ -67,8 +68,10 @@ const countriesReducer = (state = initialState, action) => {
     case ORDER_POPULATION_ASC:
       let sortedCountriesAsc = [];
       if (state.continentFilter) {
+        // Si hay un filtro por continente, se ordenan los países filtrados por población ascendente
         sortedCountriesAsc = [...state.filteredCountries].sort((a, b) => a.population - b.population);
       } else {
+        // Si no hay filtro por continente, se ordenan todos los países por población ascendente
         sortedCountriesAsc = [...state.countries].sort((a, b) => a.population - b.population);
       }
       return {
@@ -76,12 +79,13 @@ const countriesReducer = (state = initialState, action) => {
         filteredCountries: sortedCountriesAsc,
         order: 'PopulationAsc',
       };
-
     case ORDER_POPULATION_DESC:
       let sortedCountriesDesc = [];
       if (state.continentFilter) {
+        // Si hay un filtro por continente, se ordenan los países filtrados por población descendente
         sortedCountriesDesc = [...state.filteredCountries].sort((a, b) => b.population - a.population);
       } else {
+        // Si no hay filtro por continente, se ordenan todos los países por población descendente
         sortedCountriesDesc = [...state.countries].sort((a, b) => b.population - a.population);
       }
       return {
@@ -123,3 +127,4 @@ const countriesReducer = (state = initialState, action) => {
 };
 
 export default countriesReducer;
+

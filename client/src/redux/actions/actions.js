@@ -11,13 +11,11 @@ import {
   SET_SELECTED_ACTIVITY,
   ORDER_POPULATION_ASC,
   ORDER_POPULATION_DESC
-
 } from './types';
-
-
 
 const BASE_URL = "http://localhost:3001";
 
+// Acción para obtener todos los países desde la API
 export function getCountries() {
   return async function (dispatch) {
     try {
@@ -32,7 +30,7 @@ export function getCountries() {
   };
 };
 
-
+// Acción para obtener los detalles de un país específico mediante su ID
 export const getDetail = (id) => async (dispatch) => {
   try {
     const res = await axios.get(`${BASE_URL}/countries/${id}`);
@@ -45,7 +43,7 @@ export const getDetail = (id) => async (dispatch) => {
   }
 };
 
-
+// Acción para buscar países por un término de búsqueda
 export const searchCountry = (searchTerm) => async (dispatch) => {
   try {
     const response = await axios.get(`${BASE_URL}/countries/name/${searchTerm}`);
@@ -63,25 +61,30 @@ export const searchCountry = (searchTerm) => async (dispatch) => {
   }
 };
 
+// Acción para restablecer los países filtrados y mostrar todos los países
 export const resetFilteredCountries = () => {
   return {
     type: RESET_FILTERED_COUNTRIES,
   };
 };
 
+// Acción para ordenar los países según un criterio de orden especificado
 export const orderCountries = (order) => ({
   type: ORDER_COUNTRIES,
   payload: order
 });
 
+// Acción para ordenar los países por población de forma ascendente
 export const orderPopulationAsc = () => ({
   type: ORDER_POPULATION_ASC,
 });
 
+// Acción para ordenar los países por población de forma descendente
 export const orderPopulationDesc = () => ({
   type: ORDER_POPULATION_DESC,
 });
 
+// Acción para filtrar los países por continente
 export const filterByContinent = (continent) => {
   const payload = continent === "ALL" ? null : continent;
   return {
@@ -90,7 +93,7 @@ export const filterByContinent = (continent) => {
   };
 };
 
-
+// Acción para crear una nueva actividad
 export const createActivity = (activityData) => async (dispatch) => {
   try {
     const res = await axios.post(`${BASE_URL}/activities`, activityData)
@@ -100,6 +103,7 @@ export const createActivity = (activityData) => async (dispatch) => {
   }
 };
 
+// Acción para obtener todas las actividades desde la API
 export const getAllActivities = () => async (dispatch) => {
   try {
     const response = await axios.get(`${BASE_URL}/activities`);
@@ -113,9 +117,10 @@ export const getAllActivities = () => async (dispatch) => {
   }
 };
 
-
+// Acción para establecer una actividad seleccionada
 export const filterByActivity = (activity) => ({
   type: SET_SELECTED_ACTIVITY,
   payload: activity,
 });
+
 
