@@ -24,12 +24,15 @@
   margin-bottom: 1rem;
   }
 .order_container label {
+  font-family: MS Gothic; 
   color: rgb(35, 36, 37);
 }
 .filter_container label {
+  font-family: MS Gothic; 
   color: rgb(35, 36, 37);
 }
 .select {
+  font-family: MS Gothic; 
   padding: 0.5rem;
   font-size: 1rem;
   border-radius: 0.25rem;
