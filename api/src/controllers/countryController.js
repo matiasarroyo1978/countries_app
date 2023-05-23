@@ -17,7 +17,7 @@ const mapCountry = (country) => ({
 
 const saveCountries = async () => {
   try {
-    const response = await axios.get('https://restcountries.com/v3/all');
+    const response = await axios.get('https://rest-countries.up.railway.app/v3/all');
     const countries = response.data.map(mapCountry);
     const result = await Country.bulkCreate(countries, { ignoreDuplicates: true });
     console.log('Countries saved from api:', result.length);
@@ -63,10 +63,10 @@ const getCountryByName = async (req, res) => {
       return res.status(404).json({ message: 'Country not found' });
     }
 
-    res.json(country);
+    return res.json(country);
   } catch (error) {
     console.error(error);
-    res.status(500).json({ message: 'Error when searching for the country' });
+    return res.status(500).json({ message: 'Error when searching for the country' });
   }
 };
 
@@ -74,10 +74,10 @@ const getCountryByName = async (req, res) => {
 const getAll = async (req, res) => {
   try {
     const countries = await Country.findAll();
-    res.json(countries);
+    return res.json(countries);
   } catch (error) {
     console.error(error);
-    res.status(500).json({ message: 'Error getting countries' });
+    return res.status(500).json({ message: 'Error getting countries' });
   }
 };
 

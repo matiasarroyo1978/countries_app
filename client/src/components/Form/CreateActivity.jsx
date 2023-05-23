@@ -171,8 +171,8 @@ const CreateActivity = ({ showNavBar }) => {
             onChange={handleCountryChange}
           >
             <option value="">Select Country</option>
-            {countriesSorted?.map((event, i) => (
-                    <option key={i} value={event.name}>
+            {countriesSorted?.map((event) => (
+                    <option key={event.id} value={event.id}>
                       {event.name}
                     </option>
             ))}
