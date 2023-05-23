@@ -19,7 +19,7 @@ export const NavBar = () => {
   const activities = useSelector(state => state.activities);
   const isDetailPage = location.pathname.startsWith('/detail');
   const isHomePage = location.pathname === '/home';
-
+ 
 
   const handleSort = (event) => {
     if (event.target.value === 'PopulationAsc') {
