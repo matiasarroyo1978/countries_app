@@ -49,18 +49,7 @@ font-family: MS Gothic;
   text-decoration: none;
 }
 
-.footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #48586169;
-  color: white;
-  text-align: center;
-}
+
 
 .left {
   display: flex;
@@ -84,22 +73,4 @@ font-family: MS Gothic;
   padding: 5px;
 }
 
-.logos_img {
-  width: 30px;
-  height: 30px;
-  padding: 5px;
-}
-
-.column {
-  margin: auto;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-}
-p {
-  font-family: MS Gothic;
-  display: contents;
-  color: rgb(14, 13, 13);
-}
 

@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getDetail } from '../../redux/actions/actions';
 import styles from './Detail.module.css';
-
+import Footer from '../Footer/Footer';
 // Componente de detalle del país
 const Detail = () => {
   // Obtiene el parámetro "id" de la URL
@@ -55,6 +55,7 @@ const Detail = () => {
             </p>
           </div>
         </div>
+        <Footer />
       </div>
     </>
   );

@@ -4,7 +4,7 @@ import { createActivity, getCountries } from '../../redux/actions/actions';
 import { NavBar } from '../NavBar/NavBar';
 import styles from './CreateActivity.module.css';
 import { useHistory } from 'react-router-dom';
-
+import Footer from '../Footer/Footer';
 
 const CreateActivity = ({ showNavBar }) => {
   const history = useHistory();
@@ -195,7 +195,9 @@ const CreateActivity = ({ showNavBar }) => {
         </div>
         <button className={styles.button} type="submit">Create Activity</button>
       </form>
+      <Footer />
     </div>
+  
   );
 }
 
