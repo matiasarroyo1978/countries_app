@@ -77,18 +77,12 @@ const CreateActivity = ({ showNavBar }) => {
   
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Verificar si la actividad ya existe en cualquier país
-  const existingActivity = activities.find(a => a.name === activityData.name);
-  console.log(existingActivity)
-  if (existingActivity) {
-    // Verificar si la actividad ya existe en el país seleccionado
-    const existingActivityInCountry = activities.find(a => a.name === activityData.name && a.countries === activityData.countries.name);
-    console.log(existingActivityInCountry)
-    if (existingActivityInCountry) {
-      alert(`An activity with the name "${activityData.name}" already exists in this country. Please choose a different name or country.`);
+    const existingActivity = activities.find(a => a.name === activityData.name);
+    if (existingActivity) {
+      alert(`An activity with the name "${activityData.name}" already exists. Please choose a different name.`);
       return;
     }
-  }
+
     if (activityData.countries.length === 0) {
       alert('Please select at least one country!');
       return;

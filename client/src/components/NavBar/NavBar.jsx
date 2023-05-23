@@ -91,9 +91,6 @@ export const NavBar = () => {
         {isDetailPage && (
           <Link className={styles.button} to='/home'>Back</Link>
         )}
-        {!isDetailPage && (
-          <Link className={styles.button} to='/'>Landing</Link>
-        )}
       </div>
     </nav>
   );

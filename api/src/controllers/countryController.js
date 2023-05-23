@@ -41,10 +41,10 @@ const getCountryDetails = async (req, res) => {
     if (!country) {
       return res.status(404).json({ message: 'Country not found' });
     }
-    res.json(country);
+    return res.json(country);
   } catch (error) {
     console.error(error);
-    res.status(500).json({ message: 'Failed to get country' });
+    return res.status(500).json({ message: 'Failed to get country' });
   }
 };
 

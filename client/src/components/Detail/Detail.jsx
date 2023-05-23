@@ -59,53 +59,40 @@ export default function Detail(props) {
     const dispatch = useDispatch()
     const id = props.match.params.id
     const countryDetails = useSelector((state) => state.detail)
-  
     // const history = useHistory()
-    
+    console.log(countryDetails.selectedActivity);
     useEffect(() => {
         dispatch(getDetail(id))
     },[dispatch, id])
-    // const activities = useSelector(state => state.activities);
-    // console.log(activities.countries)
-    // function handleClick(e){}
-    //     e.preventDefault();
-    //     history.push("/home")
-        
-    // }
-    const country = countryDetails
-    console.log(country.activities)
     return (
         
         <div className={s.prindiv}>
-
-            {/* <div className={s.bar}>
-            <Link to= "/home"><img className={s.bothome} onClick={(e) => handleClick(e)} src={logo} alt="logo"></img></Link>
-            </div> */}
-
             <div className={s.cardd}>
 
                 <div className={s.conpais} >
                 <h2 className={s.titulod}>Country</h2>
-            
+                {countryDetails? (
             
                 <div >
-                    <img className={s.banderad} src={country.flagImage} alt="Imagen no disponible" />
-                    <h2 className={s.nombred}>{country.name}</h2>
-                    <h4 className={s.continented}>{country.continent}</h4>
-                    <h4 className={s.codigo}>{country.id}</h4>
-                    <h4 className={s.detalle}>Capital: {country.capital}</h4>
-                    <h4 className={s.detalle}>Región: {country.subregion}</h4>
-                    <h4 className={s.detalle}>Área: {country.area} km²</h4>
-                    <h4 className={s.detalle}>Population: {country.population} Hab.</h4>
+                    <img className={s.banderad} src={countryDetails.flagImage} alt="Imagen no disponible" />
+                    <h2 className={s.nombred}>{countryDetails.name}</h2>
+                    <h4 className={s.continented}>{countryDetails.continent}</h4>
+                    <h4 className={s.codigo}>{countryDetails.id}</h4>
+                    <h4 className={s.detalle}>Capital: {countryDetails.capital}</h4>
+                    <h4 className={s.detalle}>Región: {countryDetails.subregion}</h4>
+                    <h4 className={s.detalle}>Área: {countryDetails.area} km²</h4>
+                    <h4 className={s.detalle}>Population: {countryDetails.population} Hab.</h4>
                 </div> 
-            
+                ) : (
+                    <p>Loading...</p> 
+                    )}
                 </div>
-
+                
             <div className={s.conact}>
             <h3 className={s.titulod}>Country Activities</h3>
             {   
-                country.activities&&country.activities.length? 
-                country.activities.map(e => {
+                countryDetails.selectedActivity&&countryDetails.selectedActivity.length? 
+                countryDetails.selectedActivity.map(e => {
                 return (
                         <div key={e.id}>
                             <h4 className={s.nombreact}>{e.name}</h4>

@@ -26,7 +26,7 @@ const createActivity = async (req, res) => {
     });
 
     // Retornar una respuesta exitosa con la información de la actividad y los países relacionados
-    res.status(201).json({
+    return res.status(201).json({
       id: newActivity.id,
       name: newActivity.name,
       difficulty: newActivity.difficulty,
@@ -36,7 +36,7 @@ const createActivity = async (req, res) => {
     });
   } catch (error) {
     console.error(error);
-    res.status(500).json({ message: 'Error creating activity', error: error });
+    return res.status(500).json({ message: 'Error creating activity', error: error });
   }
 };
 
@@ -45,14 +45,14 @@ const getActivities = async (req, res) => {
     const activities = await Activity.findAll({
       include: {
         model: Country,
-        attributes: ['id', 'name', 'flagImage', 'continent'] // seleccionar solo los campos id y name de la tabla Country
+        attributes: ['id', 'name', 'flagImage', 'continent'],
       }
     });
 
-    res.json(activities);
+    return res.json(activities);
   } catch (error) {
     console.error(error);
-    res.status(500).json({ message: 'Error when obtaining tourist activities' });
+    return res.status(500).json({ message: 'Error when obtaining tourist activities' });
   }
 };
 
