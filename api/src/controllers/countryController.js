@@ -46,7 +46,7 @@ const getCountryDetails = async (req, res) => {
     if (!country) {
       return res.status(404).json({ message: 'Country not found' });
     }
-    return res.json(country);
+    res.json(country);
   } catch (error) {
     console.error(error);
     return res.status(500).json({ message: 'Failed to get country' });
@@ -70,7 +70,7 @@ const getCountryByName = async (req, res) => {
       return res.status(404).json({ message: 'Country not found' });
     }
 
-    return res.json(country);
+    res.json(country);
   } catch (error) {
     console.error(error);
     return res.status(500).json({ message: 'Error when searching for the country' });
@@ -81,7 +81,7 @@ const getCountryByName = async (req, res) => {
 const getAll = async (req, res) => {
   try {
     const countries = await Country.findAll();
-    return res.json(countries);
+    res.json(countries);
   } catch (error) {
     console.error(error);
     return res.status(500).json({ message: 'Error getting countries' });

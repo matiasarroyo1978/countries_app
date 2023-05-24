@@ -26,7 +26,7 @@ const createActivity = async (req, res) => {
     });
 
     // Retornar una respuesta exitosa con la información de la actividad y los países relacionados
-    return res.status(201).json({
+    res.status(201).json({
       id: newActivity.id,
       name: newActivity.name,
       difficulty: newActivity.difficulty,
@@ -49,7 +49,7 @@ const getActivities = async (req, res) => {
       }
     });
 
-    return res.json(activities);
+    res.status(200).json(activities);
   } catch (error) {
     console.error(error);
     return res.status(500).json({ message: 'Error when obtaining tourist activities' });
