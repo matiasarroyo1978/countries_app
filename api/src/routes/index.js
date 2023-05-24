@@ -23,9 +23,9 @@ router.post('/activities', activityController.createActivity);
 
 // Endpoint para obtener todas las actividades turísticas
 router.get('/activities', activityController.getActivities);
-
+// Endpoint para eliminar una actividad turística
 router.delete('/activities/:id', activityController.deleteActivity);
-
+// Endpoint para modificar actividad turística
 router.put('/activities/:id', activityController.modifyActivity);
 // Llamar la función fetchAndSaveCountries al levantar el servidor
 countryController.saveCountries();
