@@ -1,7 +1,6 @@
 const { Router } = require('express');
 const countryController = require('../controllers/countryController');
 const activityController = require('../controllers/activityController');
-const { getActivities } = require('../controllers/activityController');
 // Importar todos los routers;
 // Ejemplo: const authRouter = require('./auth.js');
 
@@ -25,6 +24,9 @@ router.post('/activities', activityController.createActivity);
 // Endpoint para obtener todas las actividades turísticas
 router.get('/activities', activityController.getActivities);
 
+router.delete('/activities/:id', activityController.deleteActivity);
+
+router.put('/activities/:id', activityController.modifyActivity);
 // Llamar la función fetchAndSaveCountries al levantar el servidor
 countryController.saveCountries();
 

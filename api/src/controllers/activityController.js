@@ -55,6 +55,40 @@ const getActivities = async (req, res) => {
     return res.status(500).json({ message: 'Error when obtaining tourist activities' });
   }
 };
+const deleteActivity = async (req, res) => {
+  const activityNameData = req.params.id;
+  try {
+    await Activity.destroy({
+      where: {
+        id: activityNameData,
+      },
+    });
+    return res.status(204).json({ message: 'Activity deleted' });
+  } catch (error) {
+    return res.status(500).send(error);
+  }
+}
+const modifyActivity = async (req, res) => {
+  const { id } = req.params
+  const activityToModify = await Activity.findOne({
+    where: {id }
+    })
+    if (!activityToModify) {
+      return res.status(404).json({ message: 'Activity not found' });
+      }
+      const { name, difficulty, duration, season, countries } = req.body
+      try {
+        const updatedActivity = await activityToModify.update({
+          name,
+          difficulty,
+          duration,
+          season,
+          countries,
+          });
+          return res.status(201).json(updatedActivity);
+          } catch (error) {
+            return res.status(500).json({ message: 'Error when updating tourist activity' });
+            }
+}
 
-
-module.exports = { createActivity, getActivities };
+module.exports = { createActivity, getActivities, deleteActivity, modifyActivity };
