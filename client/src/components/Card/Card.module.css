@@ -1,5 +1,5 @@
 .card {
-  border: 1px solid #0f0808;
+  border: 5px solid #0f0808;
   border-radius: 15px;
   padding: 15px;
   text-align: center;
@@ -8,11 +8,11 @@
   margin-right: 20px;
   margin-bottom: 20px;
   display: inline-block;
-  background-color: #fff;
+  background-color: #f3d9d9;
 }
 
 .card:hover {
-  box-shadow: 2px 2px 5px #aaa;
+  box-shadow: 10px 10px 15px #810101;
 }
 
 .card_image {

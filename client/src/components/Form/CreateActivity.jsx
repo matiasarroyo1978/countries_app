@@ -121,7 +121,7 @@ const CreateActivity = ({ showNavBar }) => {
           <input className={styles.input} type="text" id="name" name="name" value={activityData.name} onChange={handleInputChangeName} required />
         </div>
         <div>
-          <label className={styles.label} htmlFor="difficulty">Difficulty:</label>
+          <label className={styles.label} htmlFor="difficulty">Difficulty(1 to 5):</label>
           <input
             type="number"
             name="difficulty"
