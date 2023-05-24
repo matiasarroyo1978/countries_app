@@ -55,8 +55,9 @@ const Detail = () => {
             </p>
           </div>
         </div>
-        <Footer />
+       
       </div>
+      <Footer />
     </>
   );
 };

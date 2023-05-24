@@ -109,6 +109,7 @@ const CreateActivity = ({ showNavBar }) => {
   let countriesSorted = countries.sort((a, b) => a.name.localeCompare(b.name)); 
 
   return (
+    <>
     <div >
       <div>
         <h1 className={styles.h1_titel}>Activity Creation</h1>
@@ -195,9 +196,10 @@ const CreateActivity = ({ showNavBar }) => {
         </div>
         <button className={styles.button} type="submit">Create Activity</button>
       </form>
-      <Footer />
+      
     </div>
-  
+    <Footer />
+    </>
   );
 }
 

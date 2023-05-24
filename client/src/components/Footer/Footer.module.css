@@ -1,14 +1,12 @@
 .footer {
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
     left: 0;
-    bottom: 0;
+    bottom: 0; 
     width: 100%;
     background-color: #48586169;
-    color: white;
-    text-align: center;
   }
   .logos_img {
     width: 30px;
@@ -16,7 +14,7 @@
     padding: 5px;
   }
   
-  .colum.n {
+  .column {
     margin: auto;
     top: 0;
     left: 0;
