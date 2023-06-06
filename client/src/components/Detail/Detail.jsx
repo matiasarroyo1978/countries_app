@@ -12,7 +12,6 @@ const Detail = () => {
   // Obtiene la función "dispatch" y el estado "detail" desde Redux
   const dispatch = useDispatch();
   const country = useSelector(state => state.detail);
-
   // Efecto secundario para obtener el detalle del país al cargar el componente o al cambiar el ID
   useEffect(() => {
     dispatch(getDetail(id))
