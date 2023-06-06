@@ -17,7 +17,6 @@ router.get('/countries/:idPais', countryController.getCountryDetails);
 
 // Endpoint para buscar países por su nombre
 router.get('/countries/name/:name', countryController.getCountryByName);
-
 // Endpoint para crear una actividad turística y relacionarla con los países indicados
 router.post('/activities', activityController.createActivity);
 

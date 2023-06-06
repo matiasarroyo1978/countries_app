@@ -18,7 +18,7 @@ const createActivity = async (req, res) => {
     });
 
     // Relacionar la actividad turística con los países indicados
-    await newActivity.addCountries(countries);
+    await newActivity.addCountry(countries);
 
     // Obtener los países relacionados con la actividad
     const relatedCountries = await Country.findAll({

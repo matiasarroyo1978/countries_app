@@ -1,5 +1,5 @@
 const axios = require('axios');
-const { Country } = require('../db');
+const { Country, Activity } = require('../db');
 const { Op } = require("sequelize");
 //const data = require('../../data.json')
 
@@ -88,11 +88,40 @@ const getAll = async (req, res) => {
   }
 };
 
+const updateCountry = async (id, body) => {
+  const {
+    name,
+    flags,
+    continent,
+    capital,
+    subregion,
+    area,
+    population,
+    activities,
+  } = body;
+  let country = await Country.findByPk(id.toUpperCase());
+  country.name = name;
+  country.flags = flags;
+  country.continent = continent;
+  country.capital = capital;
+  country.subregion = subregion;
+  country.area = area;
+  country.population = population;
+  const activity = await Activity.findAll({
+    where: {
+      name: activities,
+    },
+  });
+  country.addActivity(activity);
+  country.save()
+  return country;
+};
 module.exports = {
   saveCountries,
   getCountryDetails,
   getCountryByName,
   getAll,
+  updateCountry,
 };
 
 
